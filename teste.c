@@ -5,9 +5,10 @@
 
 int main(){
   TAux lista = NULL;
+  int ordem;
   
   /*
-  ler_Num(lista);
+  ler_Num(lista,ordem);
   exibir(lista);
   /* */
   
