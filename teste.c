@@ -6,7 +6,7 @@
 int main(){
   TAux L = NULL;
   
-  ler_Num(&fila);
+  ler_Num(&L);
   /*
   inserir(&L, 2, PILHA, DESORDENADO);
   inserir(&L, 3, PILHA, DESORDENADO);
@@ -14,5 +14,5 @@ int main(){
   inserir(&L, 5, PILHA, DESORDENADO);
   inserir(&L, 6, PILHA, DESORDENADO);
   /* */
-  exibir(fila);
+  exibir(L);
 }
