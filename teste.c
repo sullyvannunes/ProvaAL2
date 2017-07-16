@@ -3,16 +3,14 @@
 #include "config.h"
 #include "comum.h"
 
+
+
 int main(){
-  TAux L = NULL;
-  
-  ler_Num(&L);
-  /*
-  inserir(&L, 2, PILHA, DESORDENADO);
-  inserir(&L, 3, PILHA, DESORDENADO);
-  inserir(&L, 4, PILHA, DESORDENADO);
-  inserir(&L, 5, PILHA, DESORDENADO);
-  inserir(&L, 6, PILHA, DESORDENADO);
-  /* */
-  exibir(L);
+  TAux lista = NULL;
+  inserir(&lista, 2, LISTA, DECRESCENTE);
+  inserir(&lista, 3, LISTA, DECRESCENTE);
+  inserir(&lista, 4, LISTA, DECRESCENTE);
+  inserir(&lista, 5, LISTA, DECRESCENTE);
+  inserir(&lista, 6, LISTA, DECRESCENTE);
+  exibir(lista);
 }

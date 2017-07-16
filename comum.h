@@ -63,6 +63,15 @@ void exibir(TAux lista) {
   puts("");
 }
 
+int tamanho(TAux lista){
+int total = 0;
+  TAux auxiliar = lista;
+  while(!is_vazio(auxiliar)){
+    total++;
+  }
+  return total;
+}
+
 int inserir_pilha(TAux *estrutura, int valor){
   TAux novo;
   if(is_vazio(*estrutura))
@@ -86,8 +95,33 @@ int inserir_fila(TAux *estrutura, int valor){
   return TRUE;
 }
 
+int condition_inserir(int primeiro, int segundo, int condition){
+  if(condition == DECRESCENTE)
+    return is_maior(primeiro, segundo);
+  else
+    return is_menor(primeiro, segundo);
+}
+
 int inserir_lista(TAux *lista, int valor, int ordem){
-  return 1;
+  TAux auxiliar, novo;
+  if(ordem == DESORDENADO)
+    return inserir_pilha(lista, valor);
+  else{
+    if(is_vazio(*lista) || condition_inserir(valor, (*lista)->valor, ordem)){
+      alocar_e_atribuir(lista, &novo, valor, *lista);
+      return TRUE;
+    }
+    auxiliar = *lista;
+    while(auxiliar->prox){
+      if(condition_inserir(valor, (*lista)->valor, ordem)){
+        alocar_e_atribuir(&auxiliar, &novo, valor, auxiliar->prox);
+        return TRUE;
+      }
+      iterar(&auxiliar);
+    }
+    alocar_e_atribuir(&(auxiliar->prox), &novo, valor, NULL);
+    return TRUE;
+  }
 }
 
 int inserir(TAux *estrutura, int valor, int option, int ordem){
@@ -105,7 +139,7 @@ int inserir(TAux *estrutura, int valor, int option, int ordem){
 
 int ler_Num(TAux *auxiliar)
 {
-  FILE *arq=fopen("numeros.txt","r");
+  FILE *arq = fopen("numeros.txt","r");
   int i;
   if(!arq){
     printf("\n\t\t Erro na abertura de arquivo!\n");
@@ -120,13 +154,4 @@ int ler_Num(TAux *auxiliar)
     fclose(arq);
     return 0;
   }
-}
-
-int tamanho(TAux lista){
-int total = 0;
-  TAux auxiliar = lista;
-  while(!is_vazio(auxiliar)){
-    total++;
-  }
-  return total;
 }
