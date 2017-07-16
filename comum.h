@@ -14,7 +14,7 @@ int inserir_pilha(TAux *estrutura, int valor);
 int inserir_fila(TAux *estrutura, int valor);
 int inserir_lista(TAux *lista, int valor, int ordem);
 int inserir(TAux *estrutura, int valor, int option, int ordem);
-int ler_Num(TAux *auxiliar);
+int ler_Num(TAux *auxiliar,int ordem)
 int condition_inserir(int primeiro, int segundo, int condition);
 int comparar(TAux L1, TAux L2);
 
@@ -190,7 +190,7 @@ int inserir(TAux *estrutura, int valor, int option, int ordem){
   }
 }
 
-int ler_Num(TAux *auxiliar)
+int ler_Num(TAux *auxiliar,int ordem)
 {
   FILE *arq = fopen("numeros.txt","r");
   int i;
@@ -202,7 +202,7 @@ int ler_Num(TAux *auxiliar)
   else{
   while(!feof(arq)){
     fscanf(arq,"%d",&i);
-    inserir(auxiliar, i, FILA, DESORDENADO);
+    inserir(auxiliar, i, FILA, ordem);
   }
     fclose(arq);
     return 0;
