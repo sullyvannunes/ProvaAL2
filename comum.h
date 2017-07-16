@@ -88,7 +88,9 @@ int inserir_fila(TAux *estrutura, int valor){
 
 int inserir(TAux *estrutura, int valor, int option){
   switch (option) {
-    case PILHA || LISTA:
+    case PILHA:
+      return inserir_pilha(estrutura, valor);
+    case LISTA:
       return inserir_pilha(estrutura, valor);
     case FILA:
       return inserir_fila(estrutura, valor);
