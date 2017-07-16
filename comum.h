@@ -1,3 +1,22 @@
+void encerrar_execucao(char *s);
+void alocar_e_atribuir(TAux *destino, TAux *novo, int valor, TAux prox);
+int tamanho(TAux lista);
+int is_vazio(TAux lista);
+int is_par(int numero);
+int is_impar(int numero);
+int is_menor(int primeiro, int segundo);
+int is_maior(int primeiro, int segundo);
+void iterar(TAux *lista);
+TAux buscar(TAux lista, int valor);
+int quantidade_de_em(int valor, TAux lista);
+void exibir(TAux lista);
+int inserir_pilha(TAux *estrutura, int valor);
+int inserir_fila(TAux *estrutura, int valor);
+int inserir_lista(TAux *lista, int valor, int ordem);
+int inserir(TAux *estrutura, int valor, int option, int ordem);
+int ler_Num(TAux *auxiliar);
+int condition_inserir(int primeiro, int segundo, int condition);
+
 void encerrar_execucao(char *s){
   puts(s);
   exit(EXIT_FAILURE);
