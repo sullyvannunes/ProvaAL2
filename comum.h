@@ -121,3 +121,12 @@ int ler_Num(TAux *auxiliar)
     return 0;
   }
 }
+
+int tamanho(TAux lista){
+int total = 0;
+  TAux auxiliar = lista;
+  while(!is_vazio(auxiliar)){
+    total++;
+  }
+  return total;
+}
