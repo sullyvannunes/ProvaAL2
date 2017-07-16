@@ -14,7 +14,7 @@ int inserir_pilha(TAux *estrutura, int valor);
 int inserir_fila(TAux *estrutura, int valor);
 int inserir_lista(TAux *lista, int valor, int ordem);
 int inserir(TAux *estrutura, int valor, int option, int ordem);
-int ler_Num(TAux *auxiliar,int ordem)
+int ler_Num(TAux *auxiliar,int ordem);
 int condition_inserir(int primeiro, int segundo, int condition);
 int comparar(TAux L1, TAux L2);
 
