@@ -7,7 +7,7 @@ int main(){
   TAux lista = NULL;
   
   /*
-  ler_Num(lista, DECRESCENTE);
+  ler_Num(&lista, DECRESCENTE);
   exibir(lista);
   /* */
   
