@@ -16,10 +16,43 @@ int inserir_lista(TAux *lista, int valor, int ordem);
 int inserir(TAux *estrutura, int valor, int option, int ordem);
 int ler_Num(TAux *auxiliar);
 int condition_inserir(int primeiro, int segundo, int condition);
+int comparar(TAux L1, TAux L2);
 
 void encerrar_execucao(char *s){
   puts(s);
   exit(EXIT_FAILURE);
+}
+
+int comparar(TAux L1, TAux L2)
+{
+	TAux aux1=L1, aux2=L2;
+	int tam1=0, tam2=0, cont=0;
+	
+	tam1=tamanho(aux1);
+	tam2=tamanho(aux2);
+	
+	if(tam1 == tam2)
+	{
+		aux1 = L1;
+		aux2 = L2;
+
+		while (aux1 != NULL)
+		{
+			if (aux1->valor == aux2->valor)
+			{
+				cont++;
+			}
+			aux1 = aux1->prox;
+			aux2 = aux2->prox;
+		}
+		
+		if(cont == tam1)
+		{
+			return TRUE;
+		}
+		return FALSE;
+	}
+	return FALSE;
 }
 
 void alocar_e_atribuir(TAux *destino, TAux *novo, int valor, TAux prox){
@@ -83,10 +116,11 @@ void exibir(TAux lista) {
 }
 
 int tamanho(TAux lista){
-int total = 0;
+  int total = 0;
   TAux auxiliar = lista;
   while(!is_vazio(auxiliar)){
-    total++;
+	total++;
+	iterar(&auxiliar);
   }
   return total;
 }
