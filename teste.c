@@ -7,13 +7,14 @@ int main(){
   	TAux lista1 = NULL, lista2 = NULL;
   	int info;
   
-  
-  	ler_Num(&lista2, LISTA, CRESCENTE);
+  	/*
+	ler_Num(&lista2, LISTA, CRESCENTE); // insere números de um arquivo para a lista
   	exibir(lista2);
   	/* */
   
-  
-  	inserir(&lista1, 2, LISTA, DECRESCENTE);
+  	/* 
+  	// insere números para a lista
+	inserir(&lista1, 2, LISTA, DECRESCENTE);
   	inserir(&lista1, 3, LISTA, DECRESCENTE);
   	inserir(&lista1, 4, LISTA, DECRESCENTE);
 	inserir(&lista1, 5, LISTA, DECRESCENTE);
@@ -22,12 +23,12 @@ int main(){
   	exibir(lista1);
   	/* */
   
+  	/*
+  	info = comparar(lista1,lista2); // compara duas listas
   
-  	info = comparar(lista1,lista2);
-  
-  	if(info==0)
-		printf("\n DIFERENTES \n");
+  	if(info)
+		printf("\n IGUAIS \n");
   	else
-  		printf("\n IGUAIS \n");
+  		printf("\n DIFERENTES \n");
   	/* */
 }
