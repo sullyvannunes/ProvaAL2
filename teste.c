@@ -4,15 +4,15 @@
 #include "comum.h"
 
 int main(){
-  TAux fila = NULL;
+  TAux L = NULL;
   
   ler_Num(&fila);
   /*
-  inserir(&fila, 2, PILHA, DESORDENADO);
-  inserir(&fila, 3, PILHA, DESORDENADO);
-  inserir(&fila, 4, PILHA, DESORDENADO);
-  inserir(&fila, 5, PILHA, DESORDENADO);
-  inserir(&fila, 6, PILHA, DESORDENADO);
+  inserir(&L, 2, PILHA, DESORDENADO);
+  inserir(&L, 3, PILHA, DESORDENADO);
+  inserir(&L, 4, PILHA, DESORDENADO);
+  inserir(&L, 5, PILHA, DESORDENADO);
+  inserir(&L, 6, PILHA, DESORDENADO);
   /* */
   exibir(fila);
 }
