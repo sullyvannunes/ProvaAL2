@@ -99,3 +99,18 @@ int inserir(TAux *estrutura, int valor, int option){
       return FALSE;
   }
 }
+
+int alterar_lista (TAux *lista, int valor1, int valor2){
+TAux auxiliar = *lista;
+TAux aux;
+
+	if ( (is_vazio(auxiliar)) || (aux = buscar(auxiliar,valor1) ==  NULL) ){
+	return FALSE;	
+	}else
+	{
+	auxiliar = buscar(auxiliar,valor1);
+	auxiliar->valor = valor2;
+	return TRUE;	
+	}
+  
+}
