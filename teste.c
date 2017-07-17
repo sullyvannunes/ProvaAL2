@@ -4,7 +4,7 @@
 #include "comum.h"
 
 int main(){
-  	TAux lista1 = NULL, lista2 = NULL;
+  	TAux lista1 = NULL, lista2 = NULL, lista3 = NULL;
   	int info;
   
   	/*
@@ -31,4 +31,9 @@ int main(){
   	else
   		printf("\n DIFERENTES \n");
   	/* */
+	
+	/*
+	copiar(lista2,&lista3);
+  	exibir(lista3);
+	/* */
 }
