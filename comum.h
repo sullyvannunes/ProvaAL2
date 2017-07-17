@@ -40,6 +40,7 @@ TAux buscar(TAux lista, int valor){
   while(!is_vazio(auxiliar)){
     if(auxiliar->valor == valor)
       return auxiliar;
+    auxiliar = auxiliar->prox;
   }
   return NULL;
 }
