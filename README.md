@@ -1,2 +1,2 @@
 # ProvaAL2
-Biblioteca de funçõe em c pra prova de AL2
+Biblioteca de funções em c para a AV2
