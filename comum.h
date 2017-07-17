@@ -17,10 +17,22 @@ int inserir(TAux *estrutura, int valor, int option, int ordem);
 int ler_Num(TAux *auxiliar, int option, int ordem);
 int condition_inserir(int primeiro, int segundo, int condition);
 int comparar(TAux L1, TAux L2);
+void copiar(TAux orig,TAux *cop);
 
 void encerrar_execucao(char *s){
   puts(s);
   exit(EXIT_FAILURE);
+}
+
+void copiar(TAux orig,TAux *cop) // copia uma lista para outra
+{
+	if(orig)
+	{
+       	*cop = (TAux) malloc(sizeof(Tno));
+       	(*cop)->valor = orig->valor;
+       	(*cop)->prox = NULL;
+    	copiar(orig->prox,&((*cop)->prox));
+	}
 }
 
 int comparar(TAux L1, TAux L2)
